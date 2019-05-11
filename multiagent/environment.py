@@ -153,6 +153,8 @@ class MultiAgentEnv(gym.Env):
                 act.append(action[index:(index+s)])
                 index += s
             action = act
+        elif isinstance(action_space, spaces.Tuple):
+            pass
         else:
             action = [action]
 
